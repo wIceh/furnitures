@@ -1,0 +1,5 @@
+name: furnitures
+version: '1.0-SNAPSHOT'
+main: me.wiceh.furnitures.Furnitures
+api-version: '1.20'
+authors: [ wIceh ]
