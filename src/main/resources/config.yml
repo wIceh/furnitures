@@ -1,0 +1,9 @@
+furnitures:
+  #test:
+    #display-name: "&7Test"
+    #material: PAPER
+    #custom-model-data: 0
+    #small: false # small armorstand
+    #floor: true # placeable on floor
+    #walls: false # placeable on walls
+    #ceiling: false # placeable on ceiling

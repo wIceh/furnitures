@@ -8,7 +8,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.jetbrains.annotations.NotNull;
 
-public class FurniturePlaceEvent extends Event implements Cancellable {
+public class FurnitureBreakEvent extends Event implements Cancellable {
 
     private static final HandlerList HANDLER_LIST = new HandlerList();
     private boolean isCancelled;
@@ -17,7 +17,7 @@ public class FurniturePlaceEvent extends Event implements Cancellable {
     private final ArmorStand armorStand;
     private final Furniture furniture;
 
-    public FurniturePlaceEvent(Player player, ArmorStand armorStand, Furniture furniture) {
+    public FurnitureBreakEvent(Player player, ArmorStand armorStand, Furniture furniture) {
         this.player = player;
         this.armorStand = armorStand;
         this.furniture = furniture;

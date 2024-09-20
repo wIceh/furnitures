@@ -1,4 +1,4 @@
-package me.wiceh.furnitures;
+package me.wiceh.furnitures.constants;
 
 public enum Icon {
     ERROR_BLUE("\uE40D"),

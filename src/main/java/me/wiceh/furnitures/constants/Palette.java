@@ -1,4 +1,4 @@
-package me.wiceh.furnitures;
+package me.wiceh.furnitures.constants;
 
 public enum Palette {
     BLUE("#0FA2E4"),

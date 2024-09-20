@@ -1,10 +1,12 @@
-package me.wiceh.furnitures;
+package me.wiceh.furnitures.utils;
 
-import me.wiceh.vpaddon.constants.Icon;
-import me.wiceh.vpaddon.constants.Palette;
+import me.wiceh.furnitures.constants.Icon;
+import me.wiceh.furnitures.constants.Palette;
 import net.kyori.adventure.text.format.TextColor;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
+
+import java.util.Random;
 
 import static net.kyori.adventure.text.Component.text;
 
@@ -43,5 +45,20 @@ public class Utils {
         }
 
         player.sendMessage(text(icon.getIcon() + " ").append(text(message).color(TextColor.fromHexString(hex))));
+    }
+
+    public static String generateId(int length) {
+        String characters = "0123456789abcdefghijklmnopqrstuvwxyz";
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            Random random = new Random();
+            int randomIndex = random.nextInt(characters.length());
+            char randomChar = characters.charAt(randomIndex);
+
+            builder.append(randomChar);
+        }
+
+        return builder.toString();
     }
 }
