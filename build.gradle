@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'me.wiceh'
@@ -24,7 +25,7 @@ dependencies {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 
-    if (17 >= 10 || JavaVersion.current().isJava10Compatible()) {
+    if (JavaVersion.current().isJava9Compatible()) {
         options.release.set(17)
     }
 }
@@ -35,5 +36,16 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('plugin.yml') {
         expand props
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            groupId = project.group
+            artifactId = project.name
+            version = project.version
+        }
     }
 }
